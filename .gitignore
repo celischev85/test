@@ -1,8 +1,10 @@
 Thumbs.db*
 .DS_Store
 HELP.md
-.gradle
 build/
+8.8
+buildOutputCleanup
+vcs-1
 
 ### STS ###
 .apt_generated
