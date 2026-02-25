@@ -5,6 +5,7 @@ build/
 8.8
 buildOutputCleanup
 vcs-1
+.gradle
 
 ### STS ###
 .apt_generated
