@@ -77,6 +77,16 @@ class MobileBankApiTestV1 {
                 .statusCode(200)
                 .body("currency", hasItems("RUB", "USD"));
     }
+    @Test
+    void shouldReturnValidCurrencies() {
+        given()
+                .baseUri("http://0.0.0.0:9999")
+                .when()
+                .get("/api/v1/demo/accounts")
+                .then()
+                .statusCode(200)
+                .body("currency", everyItem(anyOf(equalTo("RUB"), equalTo("USD"))));
+    }
 
     @Test
     void shouldHaveAllPositiveBalances() {
@@ -98,6 +108,7 @@ class MobileBankApiTestV1 {
                 .then()
                 .statusCode(404);
     }
+
 
     @Test
     void shouldFailOnWrongCurrency() {
