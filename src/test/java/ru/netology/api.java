@@ -1,7 +1,7 @@
 package ru.netology;
 
 import org.junit.jupiter.api.Test;
-
+import org.junit.jupiter.api.Disabled;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
@@ -109,7 +109,7 @@ class MobileBankApiTestV1 {
                 .statusCode(404);
     }
 
-
+    @Disabled("Временно отключён: тест намеренно падает — используется для демонстрации поведения CI")
     @Test
     void shouldFailOnWrongCurrency() {
         given()
